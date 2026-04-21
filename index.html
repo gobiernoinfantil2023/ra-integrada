@@ -41,8 +41,8 @@
 
       <!-- Target 1: abuela -->
       <a-entity mindar-image-target="targetIndex: 1">
-        <a-plane width="0.528" height="0.64" position="0 0 -0.5" material="shader: flat; side: double">
-          <a-video src="./abuela.mp4" autoplay="true" loop="true" muted="true" width="0.528" height="0.64" position="0 0 0"></a-video>
+        <a-plane width="0.9" height="1.6" position="0 0 -0.5" material="shader: flat; side: double">
+          <a-video src="./abuela.mp4" autoplay="true" loop="true" muted="true" width="0.9" height="1.6" position="0 0 0"></a-video>
         </a-plane>
       </a-entity>
 
@@ -69,8 +69,8 @@
 
       <!-- Target 5: garabato -->
       <a-entity mindar-image-target="targetIndex: 5">
-        <a-plane width="0.560" height="0.64" position="0 0 -0.5" material="shader: flat; side: double">
-          <a-video src="./garabato.mp4" autoplay="true" loop="true" muted="true" width="0.560" height="0.64" position="0 0 0"></a-video>
+        <a-plane width="0.9" height="1.6" position="0 0 -0.5" material="shader: flat; side: double">
+          <a-video src="./garabato.mp4" autoplay="true" loop="true" muted="true" width="0.9" height="1.6" position="0 0 0"></a-video>
         </a-plane>
       </a-entity>
 
@@ -109,22 +109,5 @@
         </a-plane>
       </a-entity>
     </a-scene>
-
-    <!-- Script adicional para forzar reproducción (por si el navegador bloquea autoplay) -->
-    <script>
-      window.addEventListener('load', function() {
-        // Esperar a que MindAR inicialice la cámara (aprox 1 segundo)
-        setTimeout(function() {
-          const videos = document.querySelectorAll('a-video');
-          videos.forEach(video => {
-            // El elemento a-video internamente crea un <video>
-            const videoElem = video.components?.material?.material?.map?.image?.video;
-            if (videoElem && videoElem.paused) {
-              videoElem.play().catch(e => console.log('Autoplay bloqueado, pero muted debería permitirlo:', e));
-            }
-          });
-        }, 1000);
-      });
-    </script>
   </body>
 </html>
