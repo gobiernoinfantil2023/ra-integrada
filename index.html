@@ -17,12 +17,12 @@
       color-space="sRGB"
       renderer="colorManagement: true, physicallyCorrectLights"
       vr-mode-ui="enabled: false"
-      device-orientation-permission-ui="enabled: false"
+      device-orientation-permission-ui="enabled: true"
     >
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-      <!-- Target 2: generaciones -->
-      <a-entity mindar-image-target="targetIndex: 2">
+      <!-- Target 0: generaciones -->
+      <a-entity mindar-image-target="targetIndex: 0">
         <a-plane
           width="1.6" height="0.9"
           position="0 0 -0.5"
@@ -42,26 +42,26 @@
       <!-- Target 1: abuela -->
       <a-entity mindar-image-target="targetIndex: 1">
         <a-plane width="0.528" height="0.64" position="0 0 -0.5" material="shader: flat; side: double">
-          <a-video src="./abuela.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+          <a-video src="./abuela.mp4" autoplay="true" loop="true" muted="true" width="0.528" height="0.64" position="0 0 0"></a-video>
         </a-plane>
       </a-entity>
 
-      <!-- Target 0: adn -->
-      <a-entity mindar-image-target="targetIndex: 0">
+      <!-- Target 2: adn -->
+      <a-entity mindar-image-target="targetIndex: 2">
         <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
           <a-video src="./adn.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
         </a-plane>
       </a-entity>
 
-      <!-- Target 4: ciencia -->
-      <a-entity mindar-image-target="targetIndex: 4">
+      <!-- Target 3: ciencia -->
+      <a-entity mindar-image-target="targetIndex: 3">
         <a-plane width="0.432" height="0.64" position="0 0 -0.5" material="shader: flat; side: double">
-          <a-video src="./ciencia.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+          <a-video src="./ciencia.mp4" autoplay="true" loop="true" muted="true" width="0.432" height="0.64" position="0 0 0"></a-video>
         </a-plane>
       </a-entity>
 
-      <!-- Target 10: familia -->
-      <a-entity mindar-image-target="targetIndex: 10">
+      <!-- Target 4: familia -->
+      <a-entity mindar-image-target="targetIndex: 4">
         <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
           <a-video src="./familia.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
         </a-plane>
@@ -70,40 +70,40 @@
       <!-- Target 5: garabato -->
       <a-entity mindar-image-target="targetIndex: 5">
         <a-plane width="0.560" height="0.64" position="0 0 -0.5" material="shader: flat; side: double">
-          <a-video src="./garabato.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+          <a-video src="./garabato.mp4" autoplay="true" loop="true" muted="true" width="0.560" height="0.64" position="0 0 0"></a-video>
         </a-plane>
       </a-entity>
 
-      <!-- Target 7: hermanas -->
-      <a-entity mindar-image-target="targetIndex: 7">
+      <!-- Target 6: hermanas -->
+      <a-entity mindar-image-target="targetIndex: 6">
         <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
           <a-video src="./hermanas.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
         </a-plane>
       </a-entity>
 
-      <!-- Target 9: hermanos -->
-      <a-entity mindar-image-target="targetIndex: 9">
+      <!-- Target 7: hermanos -->
+      <a-entity mindar-image-target="targetIndex: 7">
         <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
           <a-video src="./hermanos.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
         </a-plane>
       </a-entity>
 
-      <!-- Target 6: juicio -->
-      <a-entity mindar-image-target="targetIndex: 6">
+      <!-- Target 8: juicio -->
+      <a-entity mindar-image-target="targetIndex: 8">
         <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
           <a-video src="./juicio.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
         </a-plane>
       </a-entity>
 
-      <!-- Target 0: regalo -->
-      <a-entity mindar-image-target="targetIndex: 0">
+      <!-- Target 9: regalo -->
+      <a-entity mindar-image-target="targetIndex: 9">
         <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
           <a-video src="./regalo.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
         </a-plane>
       </a-entity>
 
-      <!-- Target 3: resolucion -->
-      <a-entity mindar-image-target="targetIndex: 3">
+      <!-- Target 10: resolucion -->
+      <a-entity mindar-image-target="targetIndex: 10">
         <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
           <a-video src="./resolucion.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
         </a-plane>
