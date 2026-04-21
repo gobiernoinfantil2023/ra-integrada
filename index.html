@@ -4,12 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Realidad Aumentada - Muestra de Arte</title>
-    <!-- Librerías necesarias -->
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <style>
+      /* Opcional: ocultar el mensaje de error de la cámara */
+      .a-dialog { display: none; }
+    </style>
   </head>
   <body>
-    <!-- Escena de A-Frame con MindAR -->
     <a-scene
       mindar-image="imageTargetSrc: ./targets.mind;"
       color-space="sRGB"
@@ -17,129 +19,112 @@
       vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false"
     >
-      <!-- Cámara fija (necesaria para tracking) -->
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <!-- Target 0: generaciones -->
       <a-entity mindar-image-target="targetIndex: 0">
         <a-plane
-          width="1.6"
-          height="0.9"
+          width="1.6" height="0.9"
           position="0 0 -0.5"
-          material="src: url(./generaciones.mp4); shader: flat; side: double"
-          video="autoplay: true; loop: true"
-        ></a-plane>
+          material="shader: flat; side: double"
+        >
+          <a-video
+            src="./generaciones.mp4"
+            autoplay="true"
+            loop="true"
+            muted="true"
+            width="1.6" height="0.9"
+            position="0 0 0"
+          ></a-video>
+        </a-plane>
       </a-entity>
 
       <!-- Target 1: abuela -->
       <a-entity mindar-image-target="targetIndex: 1">
-        <a-plane
-          width="1.6"
-          height="0.9"
-          position="0 0 -0.5"
-          material="src: url(./abuela.mp4); shader: flat; side: double"
-          video="autoplay: true; loop: true"
-        ></a-plane>
+        <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
+          <a-video src="./abuela.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+        </a-plane>
       </a-entity>
 
       <!-- Target 2: adn -->
       <a-entity mindar-image-target="targetIndex: 2">
-        <a-plane
-          width="1.6"
-          height="0.9"
-          position="0 0 -0.5"
-          material="src: url(./adn.mp4); shader: flat; side: double"
-          video="autoplay: true; loop: true"
-        ></a-plane>
+        <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
+          <a-video src="./adn.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+        </a-plane>
       </a-entity>
 
       <!-- Target 3: ciencia -->
       <a-entity mindar-image-target="targetIndex: 3">
-        <a-plane
-          width="1.6"
-          height="0.9"
-          position="0 0 -0.5"
-          material="src: url(./ciencia.mp4); shader: flat; side: double"
-          video="autoplay: true; loop: true"
-        ></a-plane>
+        <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
+          <a-video src="./ciencia.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+        </a-plane>
       </a-entity>
 
       <!-- Target 4: familia -->
       <a-entity mindar-image-target="targetIndex: 4">
-        <a-plane
-          width="1.6"
-          height="0.9"
-          position="0 0 -0.5"
-          material="src: url(./familia.mp4); shader: flat; side: double"
-          video="autoplay: true; loop: true"
-        ></a-plane>
+        <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
+          <a-video src="./familia.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+        </a-plane>
       </a-entity>
 
       <!-- Target 5: garabatos -->
       <a-entity mindar-image-target="targetIndex: 5">
-        <a-plane
-          width="1.6"
-          height="0.9"
-          position="0 0 -0.5"
-          material="src: url(./garabatos.mp4); shader: flat; side: double"
-          video="autoplay: true; loop: true"
-        ></a-plane>
+        <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
+          <a-video src="./garabatos.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+        </a-plane>
       </a-entity>
 
       <!-- Target 6: hermanas -->
       <a-entity mindar-image-target="targetIndex: 6">
-        <a-plane
-          width="1.6"
-          height="0.9"
-          position="0 0 -0.5"
-          material="src: url(./hermanas.mp4); shader: flat; side: double"
-          video="autoplay: true; loop: true"
-        ></a-plane>
+        <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
+          <a-video src="./hermanas.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+        </a-plane>
       </a-entity>
 
       <!-- Target 7: hermanos -->
       <a-entity mindar-image-target="targetIndex: 7">
-        <a-plane
-          width="1.6"
-          height="0.9"
-          position="0 0 -0.5"
-          material="src: url(./hermanos.mp4); shader: flat; side: double"
-          video="autoplay: true; loop: true"
-        ></a-plane>
+        <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
+          <a-video src="./hermanos.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+        </a-plane>
       </a-entity>
 
       <!-- Target 8: juicio -->
       <a-entity mindar-image-target="targetIndex: 8">
-        <a-plane
-          width="1.6"
-          height="0.9"
-          position="0 0 -0.5"
-          material="src: url(./juicio.mp4); shader: flat; side: double"
-          video="autoplay: true; loop: true"
-        ></a-plane>
+        <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
+          <a-video src="./juicio.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+        </a-plane>
       </a-entity>
 
       <!-- Target 9: regalo -->
       <a-entity mindar-image-target="targetIndex: 9">
-        <a-plane
-          width="1.6"
-          height="0.9"
-          position="0 0 -0.5"
-          material="src: url(./regalo.mp4); shader: flat; side: double"
-          video="autoplay: true; loop: true"
-        ></a-plane>
+        <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
+          <a-video src="./regalo.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+        </a-plane>
       </a-entity>
 
       <!-- Target 10: resolucion -->
       <a-entity mindar-image-target="targetIndex: 10">
-        <a-plane
-          width="1.6"
-          height="0.9"
-          position="0 0 -0.5"
-          material="src: url(./resolucion.mp4); shader: flat; side: double"
-          video="autoplay: true; loop: true"
-        ></a-plane>
+        <a-plane width="1.6" height="0.9" position="0 0 -0.5" material="shader: flat; side: double">
+          <a-video src="./resolucion.mp4" autoplay="true" loop="true" muted="true" width="1.6" height="0.9" position="0 0 0"></a-video>
+        </a-plane>
       </a-entity>
     </a-scene>
+
+    <!-- Script adicional para forzar reproducción (por si el navegador bloquea autoplay) -->
+    <script>
+      window.addEventListener('load', function() {
+        // Esperar a que MindAR inicialice la cámara (aprox 1 segundo)
+        setTimeout(function() {
+          const videos = document.querySelectorAll('a-video');
+          videos.forEach(video => {
+            // El elemento a-video internamente crea un <video>
+            const videoElem = video.components?.material?.material?.map?.image?.video;
+            if (videoElem && videoElem.paused) {
+              videoElem.play().catch(e => console.log('Autoplay bloqueado, pero muted debería permitirlo:', e));
+            }
+          });
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
